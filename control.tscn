@@ -1,0 +1,65 @@
+[gd_scene load_steps=5 format=3 uid="uid://bgoinxdi5cia0"]
+
+[ext_resource type="Script" uid="uid://dvygyiqqc5kn1" path="res://control.gd" id="1_0fbet"]
+[ext_resource type="Texture2D" uid="uid://0j4g7kqmtyu8" path="res://Green.png" id="3_qtu10"]
+[ext_resource type="Texture2D" uid="uid://ctbp4ojdhdq7o" path="res://chicken.png" id="4_ee4bf"]
+[ext_resource type="Texture2D" uid="uid://csbw8abnsv4qx" path="res://arrow.png" id="4_kbped"]
+
+[node name="menu" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_0fbet")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = -128
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
+texture_filter = 1
+offset_right = 3030.0
+offset_bottom = 1803.0
+texture = ExtResource("3_qtu10")
+stretch_mode = 1
+
+[node name="PlayButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 1517.0
+offset_top = 1110.0
+offset_right = 2015.0
+offset_bottom = 1254.0
+text = "PLAY"
+
+[node name="Chicken" type="Sprite2D" parent="."]
+position = Vector2(648, 1000)
+scale = Vector2(2.31762, 2.31762)
+texture = ExtResource("4_ee4bf")
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 425.0
+offset_top = 23.0
+offset_right = 2460.0
+offset_bottom = 507.0
+theme_override_colors/default_color = Color(0.4, 0.372549, 0.819608, 1)
+theme_override_font_sizes/normal_font_size = 120
+bbcode_enabled = true
+text = "[wave amp=50.0 freq=5.0 connected=1]60 Second Chicken Run[/wave]"
+
+[node name="RichTextLabel3" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 204.0
+offset_top = 533.0
+offset_right = 2239.0
+offset_bottom = 1017.0
+theme_override_colors/default_color = Color(0.4, 0.372549, 0.819608, 1)
+theme_override_font_sizes/normal_font_size = 35
+bbcode_enabled = true
+text = "[wave amp=50.0 freq=5.0 connected=1]Your favourite chicken wing store is closing in 60 seconds!
+Better start bouncing! Start by clicking the play button[/wave]"
+
+[node name="Arrow" type="Sprite2D" parent="."]
+position = Vector2(1326, 938)
+rotation = -2.36415
+scale = Vector2(0.681749, 0.681749)
+texture = ExtResource("4_kbped")

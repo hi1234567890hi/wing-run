@@ -1,0 +1,526 @@
+[gd_scene load_steps=15 format=3 uid="uid://bik7p8ielxl77"]
+
+[ext_resource type="Texture2D" uid="uid://bj043wpow03l0" path="res://Blue.png" id="1_7jktm"]
+[ext_resource type="PackedScene" uid="uid://dnf3v65cs01vx" path="res://platform.tscn" id="1_80nbo"]
+[ext_resource type="PackedScene" uid="uid://ds16heqrv0j46" path="res://ball.tscn" id="2_e2o6t"]
+[ext_resource type="Script" uid="uid://mydelgwogtsr" path="res://camera_2d.gd" id="3_feb5d"]
+[ext_resource type="Script" uid="uid://lruhofe1x75g" path="res://rich_text_label.gd" id="7_eow3j"]
+[ext_resource type="Script" uid="uid://diucyakh5drim" path="res://label.gd" id="8_j5wjh"]
+[ext_resource type="Texture2D" uid="uid://cdvee6cp6dayx" path="res://leftarrow.png" id="8_vef74"]
+[ext_resource type="Texture2D" uid="uid://clbs8s5io03f4" path="res://rightarrow.png" id="9_hve3p"]
+[ext_resource type="Texture2D" uid="uid://dwpkfib7tq6kc" path="res://up arrow.png" id="9_mfdv2"]
+[ext_resource type="Texture2D" uid="uid://55twfruhqsm8" path="res://sign.png" id="9_vef74"]
+[ext_resource type="Texture2D" uid="uid://d0ib7xqn7dl7k" path="res://image.png" id="11_iotsf"]
+[ext_resource type="Texture2D" uid="uid://v0jylh66545l" path="res://watch.png" id="12_iotsf"]
+[ext_resource type="PackedScene" uid="uid://b1yuhwai6p1jm" path="res://spike.tscn" id="13_215e1"]
+[ext_resource type="PackedScene" uid="uid://ca6wqxmftvvoo" path="res://breakable.tscn" id="14_7sc4i"]
+
+[node name="Game" type="Node2D"]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = -128
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
+texture_filter = 1
+offset_right = 3030.0
+offset_bottom = 1803.0
+texture = ExtResource("1_7jktm")
+stretch_mode = 1
+
+[node name="Label" type="Label" parent="CanvasLayer"]
+offset_left = 7.0
+offset_top = 16.0
+offset_right = 123.0
+offset_bottom = 98.0
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 75
+script = ExtResource("8_j5wjh")
+
+[node name="Sign2" type="Sprite2D" parent="."]
+position = Vector2(-122, 552)
+rotation = -2.04103
+scale = Vector2(-0.078504, 0.0858369)
+texture = ExtResource("9_vef74")
+
+[node name="Sign" type="Sprite2D" parent="."]
+position = Vector2(96, 509)
+scale = Vector2(0.0975483, 0.0975483)
+texture = ExtResource("9_vef74")
+
+[node name="StaticBody2D12" parent="." instance=ExtResource("1_80nbo")]
+position = Vector2(1059, 665)
+
+[node name="StaticBody2D" parent="." instance=ExtResource("1_80nbo")]
+position = Vector2(360, 545)
+scale = Vector2(3.16, 1)
+
+[node name="StaticBody2D2" parent="." instance=ExtResource("1_80nbo")]
+position = Vector2(1755, 716)
+
+[node name="StaticBody2D3" parent="." instance=ExtResource("1_80nbo")]
+position = Vector2(2143, 1447)
+
+[node name="StaticBody2D4" parent="." instance=ExtResource("1_80nbo")]
+position = Vector2(2530, 1317)
+
+[node name="StaticBody2D5" parent="." instance=ExtResource("1_80nbo")]
+position = Vector2(3274, 1269)
+
+[node name="StaticBody2D6" parent="." instance=ExtResource("1_80nbo")]
+position = Vector2(2962, 1061)
+
+[node name="StaticBody2D7" parent="." instance=ExtResource("1_80nbo")]
+position = Vector2(3261, 875)
+
+[node name="StaticBody2D8" parent="." instance=ExtResource("1_80nbo")]
+position = Vector2(3666, 752)
+
+[node name="StaticBody2D9" parent="." instance=ExtResource("1_80nbo")]
+position = Vector2(2922, 1481)
+
+[node name="StaticBody2D10" parent="." instance=ExtResource("1_80nbo")]
+position = Vector2(1384, 868)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(561, 497)
+script = ExtResource("3_feb5d")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_left = 399.0
+offset_top = -774.0
+offset_right = 3824.0
+offset_bottom = -184.0
+bbcode_enabled = true
+text = "[rainbow freq `2.0 sat=0.8 val=0.8 speed=50][wave amp=500 freq=5 connected =1][shake rate = 100.0 level =30 connected =1][tornado radius=1 freq=1 connected=1][fade start = 4 length=14 connected=1]hi"
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("7_eow3j")
+
+[node name="StaticBody2D14" parent="." instance=ExtResource("1_80nbo")]
+position = Vector2(2116, 585)
+
+[node name="Leftarrow" type="Sprite2D" parent="."]
+position = Vector2(286, 264)
+scale = Vector2(0.328125, 0.328125)
+texture = ExtResource("8_vef74")
+
+[node name="Rightarrow" type="Sprite2D" parent="."]
+position = Vector2(488, 263)
+scale = Vector2(0.329102, 0.329102)
+texture = ExtResource("9_hve3p")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 262.0
+offset_top = 351.0
+offset_right = 523.0
+offset_bottom = 484.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 25
+text = "to move left and right"
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 919.0
+offset_top = 360.0
+offset_right = 1180.0
+offset_bottom = 493.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 25
+text = "No need for the up arrow, you're eternally bouncing"
+
+[node name="Label4" type="Label" parent="."]
+offset_left = 3078.0
+offset_top = 465.0
+offset_right = 3801.0
+offset_bottom = 538.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 25
+text = "Don't let the timer reach 0!"
+
+[node name="Label3" type="Label" parent="."]
+offset_left = 2059.0
+offset_top = 403.0
+offset_right = 2782.0
+offset_bottom = 476.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 25
+text = "to downslam which instantly stunts your vertical movement
+and sends you straight down"
+
+[node name="Label7" type="Label" parent="."]
+offset_left = 6789.0
+offset_top = 951.0
+offset_right = 7512.0
+offset_bottom = 1024.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 25
+text = "R to quick restart"
+
+[node name="Label6" type="Label" parent="."]
+offset_left = 5574.0
+offset_top = 412.0
+offset_right = 6297.0
+offset_bottom = 485.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 25
+text = "Downslam to break these blocks"
+
+[node name="Label5" type="Label" parent="."]
+offset_left = 4037.0
+offset_top = 377.0
+offset_right = 4760.0
+offset_bottom = 450.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 25
+text = "Don't touch these"
+
+[node name="UpArrow" type="Sprite2D" parent="."]
+position = Vector2(1243, 252)
+scale = Vector2(0.471154, 0.471154)
+texture = ExtResource("9_mfdv2")
+
+[node name="CharacterBody2D" parent="." groups=["player"] instance=ExtResource("2_e2o6t")]
+position = Vector2(40, 340)
+
+[node name="Image" type="Sprite2D" parent="."]
+position = Vector2(2400, 307)
+scale = Vector2(0.335938, 0.335938)
+texture = ExtResource("11_iotsf")
+
+[node name="Watch" type="Sprite2D" parent="."]
+position = Vector2(3249, 328)
+scale = Vector2(0.434505, 0.434505)
+texture = ExtResource("12_iotsf")
+
+[node name="Area2D2" parent="." instance=ExtResource("13_215e1")]
+position = Vector2(4610, 756)
+
+[node name="StaticBody2D11" parent="." instance=ExtResource("1_80nbo")]
+position = Vector2(4149, 914)
+
+[node name="StaticBody2D13" parent="." instance=ExtResource("1_80nbo")]
+position = Vector2(4610, 782)
+
+[node name="Area2D" parent="." instance=ExtResource("13_215e1")]
+position = Vector2(4143, 278)
+scale = Vector2(3.92, 3.92)
+
+[node name="StaticBody2D15" parent="." instance=ExtResource("1_80nbo")]
+position = Vector2(5175, 861)
+scale = Vector2(2.16, 1)
+
+[node name="Area2D3" parent="." instance=ExtResource("13_215e1")]
+position = Vector2(4972, 834)
+
+[node name="Area2D4" parent="." instance=ExtResource("13_215e1")]
+position = Vector2(5016, 834)
+
+[node name="Area2D5" parent="." instance=ExtResource("13_215e1")]
+position = Vector2(5188, 834)
+
+[node name="Area2D6" parent="." instance=ExtResource("13_215e1")]
+position = Vector2(5367, 834)
+
+[node name="StaticBody2D16" parent="." instance=ExtResource("1_80nbo")]
+position = Vector2(5804, 943)
+
+[node name="StaticBody2D17" parent="." instance=ExtResource("1_80nbo")]
+position = Vector2(6144, 1238)
+
+[node name="StaticBody2D18" parent="." instance=ExtResource("14_7sc4i")]
+position = Vector2(6142, 942)
+scale = Vector2(4.96, 1)
+
+[node name="StaticBody2D19" parent="." instance=ExtResource("14_7sc4i")]
+position = Vector2(5780, 314)
+scale = Vector2(3.44, 3.44)
+
+[node name="StaticBody2D20" parent="." instance=ExtResource("1_80nbo")]
+position = Vector2(6473, 1401)
+
+[node name="Area2D7" parent="." instance=ExtResource("13_215e1")]
+position = Vector2(6564, 1375)
+
+[node name="StaticBody2D21" parent="." instance=ExtResource("1_80nbo")]
+position = Vector2(6906, 1281)
+
+[node name="Label9" type="Label" parent="."]
+offset_left = 7150.0
+offset_top = 1081.0
+offset_right = 7873.0
+offset_bottom = 1154.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 25
+text = "Quick Restart here 
+and then look at where the left sign is pointing
+towards "
+
+[node name="Label8" type="Label" parent="."]
+offset_left = 5574.0
+offset_top = 412.0
+offset_right = 6297.0
+offset_bottom = 485.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 25
+text = "Downslam to break these blocks"
+
+[node name="StaticBody2D22" parent="." instance=ExtResource("14_7sc4i")]
+position = Vector2(-131, 1012)
+scale = Vector2(3.72, 1)
+
+[node name="StaticBody2D23" parent="." instance=ExtResource("1_80nbo")]
+position = Vector2(-120, 1424)
+
+[node name="Area2D8" parent="." instance=ExtResource("13_215e1")]
+position = Vector2(-241, 1398)
+
+[node name="Area2D9" parent="." instance=ExtResource("13_215e1")]
+position = Vector2(4, 1398)
+
+[node name="Area2D16" parent="." instance=ExtResource("13_215e1")]
+position = Vector2(-414, 1566)
+rotation = 3.12019
+
+[node name="Area2D18" parent="." instance=ExtResource("13_215e1")]
+position = Vector2(-596, 1568)
+rotation = -3.08067
+
+[node name="StaticBody2D24" parent="." instance=ExtResource("1_80nbo")]
+position = Vector2(-495, 1537)
+
+[node name="Area2D10" parent="." instance=ExtResource("13_215e1")]
+position = Vector2(-378, 1511)
+
+[node name="Area2D11" parent="." instance=ExtResource("13_215e1")]
+position = Vector2(-423, 1511)
+
+[node name="Area2D12" parent="." instance=ExtResource("13_215e1")]
+position = Vector2(-582, 1511)
+
+[node name="StaticBody2D25" parent="." instance=ExtResource("1_80nbo")]
+position = Vector2(-457, 1811)
+scale = Vector2(1.66407, 1.66407)
+
+[node name="Area2D13" parent="." instance=ExtResource("13_215e1")]
+position = Vector2(-344, 1780)
+
+[node name="Area2D14" parent="." instance=ExtResource("13_215e1")]
+position = Vector2(-469, 1779)
+
+[node name="Area2D15" parent="." instance=ExtResource("13_215e1")]
+position = Vector2(-513, 1781)
+
+[node name="Area2D17" parent="." instance=ExtResource("13_215e1")]
+position = Vector2(-624, 1511)
+
+[node name="StaticBody2D26" parent="." instance=ExtResource("1_80nbo")]
+position = Vector2(-955, 1763)
+
+[node name="Area2D19" parent="." instance=ExtResource("13_215e1")]
+position = Vector2(-1077, 1737)
+
+[node name="Area2D20" parent="." instance=ExtResource("13_215e1")]
+position = Vector2(-1033, 1736)
+
+[node name="StaticBody2D27" parent="." instance=ExtResource("1_80nbo")]
+position = Vector2(-1395, 1688)
+
+[node name="Area2D21" parent="." instance=ExtResource("13_215e1")]
+position = Vector2(-1299, 1661)
+
+[node name="Area2D22" parent="." instance=ExtResource("13_215e1")]
+position = Vector2(-1343, 1661)
+
+[node name="Area2D23" parent="." instance=ExtResource("13_215e1")]
+position = Vector2(-1441, 1661)
+
+[node name="StaticBody2D28" parent="." instance=ExtResource("1_80nbo")]
+position = Vector2(-1829, 2160)
+
+[node name="Area2D24" parent="." instance=ExtResource("13_215e1")]
+position = Vector2(-1953, 2134)
+
+[node name="Area2D25" parent="." instance=ExtResource("13_215e1")]
+position = Vector2(-1909, 2134)
+
+[node name="Area2D26" parent="." instance=ExtResource("13_215e1")]
+position = Vector2(-1865, 2134)
+
+[node name="Area2D27" parent="." instance=ExtResource("13_215e1")]
+position = Vector2(-1822, 2134)
+
+[node name="Area2D28" parent="." instance=ExtResource("13_215e1")]
+position = Vector2(-1778, 2134)
+
+[node name="Area2D29" parent="." instance=ExtResource("13_215e1")]
+position = Vector2(-1735, 2134)
+
+[node name="Area2D30" parent="." instance=ExtResource("13_215e1")]
+position = Vector2(-1692, 2134)
+
+[node name="StaticBody2D29" parent="." instance=ExtResource("14_7sc4i")]
+position = Vector2(-1821, 1574)
+scale = Vector2(4.84, 1)
+
+[node name="StaticBody2D30" parent="." instance=ExtResource("1_80nbo")]
+position = Vector2(-2335, 1509)
+
+[node name="Area2D31" parent="." instance=ExtResource("13_215e1")]
+position = Vector2(-2229, 1483)
+
+[node name="Area2D32" parent="." instance=ExtResource("13_215e1")]
+position = Vector2(-2274, 1483)
+
+[node name="Area2D33" parent="." instance=ExtResource("13_215e1")]
+position = Vector2(-2319, 1483)
+
+[node name="Area2D34" parent="." instance=ExtResource("13_215e1")]
+position = Vector2(-2364, 1483)
+
+[node name="StaticBody2D31" parent="." instance=ExtResource("1_80nbo")]
+position = Vector2(-2792, 1496)
+rotation = 1.57079
+scale = Vector2(1.48, 1)
+
+[node name="StaticBody2D32" parent="." instance=ExtResource("1_80nbo")]
+position = Vector2(-2503, 1495)
+rotation = -1.57079
+scale = Vector2(1.48, 1)
+
+[node name="StaticBody2D33" parent="." instance=ExtResource("14_7sc4i")]
+position = Vector2(-2757, 1562)
+
+[node name="StaticBody2D34" parent="." instance=ExtResource("14_7sc4i")]
+position = Vector2(-2703, 1562)
+
+[node name="StaticBody2D35" parent="." instance=ExtResource("14_7sc4i")]
+position = Vector2(-2648, 1562)
+
+[node name="StaticBody2D36" parent="." instance=ExtResource("1_80nbo")]
+position = Vector2(-2716, 1817)
+
+[node name="Area2D35" parent="." instance=ExtResource("13_215e1")]
+position = Vector2(-2713, 1791)
+
+[node name="Area2D36" parent="." instance=ExtResource("13_215e1")]
+position = Vector2(-2668, 1791)
+
+[node name="StaticBody2D37" parent="." instance=ExtResource("14_7sc4i")]
+position = Vector2(-2592, 1562)
+
+[node name="StaticBody2D38" parent="." instance=ExtResource("14_7sc4i")]
+position = Vector2(-2537, 1562)
+
+[node name="StaticBody2D39" parent="." instance=ExtResource("1_80nbo")]
+position = Vector2(-3090, 1781)
+
+[node name="StaticBody2D40" parent="." instance=ExtResource("1_80nbo")]
+position = Vector2(-3391, 1625)
+
+[node name="Area2D39" parent="." instance=ExtResource("13_215e1")]
+position = Vector2(-3214, 1519)
+rotation = -3.14159
+
+[node name="StaticBody2D41" parent="." instance=ExtResource("1_80nbo")]
+position = Vector2(-3101, 1489)
+
+[node name="Area2D37" parent="." instance=ExtResource("13_215e1")]
+position = Vector2(-3091, 1755)
+
+[node name="Area2D40" parent="." instance=ExtResource("13_215e1")]
+position = Vector2(-3357, 1599)
+
+[node name="Area2D47" parent="." instance=ExtResource("13_215e1")]
+position = Vector2(-3461, 1399)
+rotation = -3.14159
+
+[node name="StaticBody2D42" parent="." instance=ExtResource("1_80nbo")]
+position = Vector2(-3389, 1368)
+
+[node name="Area2D42" parent="." instance=ExtResource("13_215e1")]
+position = Vector2(-2979, 1463)
+
+[node name="Area2D43" parent="." instance=ExtResource("13_215e1")]
+position = Vector2(-3024, 1463)
+
+[node name="Area2D44" parent="." instance=ExtResource("13_215e1")]
+position = Vector2(-3070, 1463)
+
+[node name="Area2D45" parent="." instance=ExtResource("13_215e1")]
+position = Vector2(-3115, 1463)
+
+[node name="Area2D46" parent="." instance=ExtResource("13_215e1")]
+position = Vector2(-3160, 1463)
+
+[node name="Area2D48" parent="." instance=ExtResource("13_215e1")]
+position = Vector2(-3314, 1342)
+
+[node name="Area2D49" parent="." instance=ExtResource("13_215e1")]
+position = Vector2(-3450, 1342)
+
+[node name="StaticBody2D43" parent="." instance=ExtResource("1_80nbo")]
+position = Vector2(-3729, 1537)
+
+[node name="Area2D50" parent="." instance=ExtResource("13_215e1")]
+position = Vector2(-3512, 1599)
+
+[node name="Area2D51" parent="." instance=ExtResource("13_215e1")]
+position = Vector2(-3796, 1511)
+
+[node name="Area2D52" parent="." instance=ExtResource("13_215e1")]
+position = Vector2(-3748, 1511)
+
+[node name="Area2D54" parent="." instance=ExtResource("13_215e1")]
+position = Vector2(-3605, 1511)
+
+[node name="StaticBody2D44" parent="." instance=ExtResource("14_7sc4i")]
+position = Vector2(-4050, 1450)
+
+[node name="StaticBody2D45" parent="." instance=ExtResource("14_7sc4i")]
+position = Vector2(-4280, 1348)
+
+[node name="StaticBody2D46" parent="." instance=ExtResource("14_7sc4i")]
+position = Vector2(-4458, 1238)
+
+[node name="StaticBody2D47" parent="." instance=ExtResource("14_7sc4i")]
+position = Vector2(-4627, 1151)
+
+[node name="Area2D55" parent="." instance=ExtResource("13_215e1")]
+position = Vector2(-4041, 1710)
+
+[node name="Area2D56" parent="." instance=ExtResource("13_215e1")]
+position = Vector2(-4270, 1587)
+
+[node name="Area2D57" parent="." instance=ExtResource("13_215e1")]
+position = Vector2(-4458, 1450)
+
+[node name="StaticBody2D48" parent="." instance=ExtResource("1_80nbo")]
+position = Vector2(-4735, 1864)
+
+[node name="Sign3" type="Sprite2D" parent="."]
+position = Vector2(-4686, 1142)
+rotation = -1.62666
+scale = Vector2(-0.111237, 0.108931)
+texture = ExtResource("9_vef74")
+
+[node name="StaticBody2D49" parent="." instance=ExtResource("1_80nbo")]
+position = Vector2(-5208, 1727)
+
+[node name="Area2D38" parent="." instance=ExtResource("13_215e1")]
+position = Vector2(-5209, 1701)
+
+[node name="Area2D41" parent="." instance=ExtResource("13_215e1")]
+position = Vector2(-5301, 1700)
+
+[node name="Area2D53" parent="." instance=ExtResource("13_215e1")]
+position = Vector2(-5116, 1700)
