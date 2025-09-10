@@ -31,6 +31,7 @@ func _physics_process(delta):
 		velocity.y = Global.JUMP
 	
 	if Input.is_action_pressed("quick_restart"):
+		Global.time_left=60.0
 		get_tree().reload_current_scene()
 		
 

@@ -4,5 +4,5 @@ func _ready():
 
 func _on_body_entered(body: Node) -> void:
 	if body.is_in_group("player"):
-		get_tree().reload_current_scene()
-		Global.time_left=60.0
+		Global.final_time = Global.time_left
+		get_tree().change_scene_to_file("res://WinScreen.tscn")

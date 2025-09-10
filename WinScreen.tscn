@@ -1,0 +1,57 @@
+[gd_scene load_steps=3 format=3 uid="uid://lqmqadlge33h"]
+
+[ext_resource type="Script" uid="uid://blhjpvkca0nno" path="res://win_screen.gd" id="1_0eiwq"]
+[ext_resource type="Texture2D" uid="uid://0j4g7kqmtyu8" path="res://Green.png" id="1_a03an"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_0eiwq")
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 900.0
+offset_top = 548.0
+offset_right = 2935.0
+offset_bottom = 1032.0
+theme_override_colors/default_color = Color(0.4, 0.372549, 0.819608, 1)
+theme_override_font_sizes/normal_font_size = 120
+bbcode_enabled = true
+text = "[wave amp=100.0 freq=10.0 connected=1]You Win![/wave]"
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = -128
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
+texture_filter = 1
+offset_left = -91.0
+offset_top = -136.0
+offset_right = 2939.0
+offset_bottom = 1667.0
+texture = ExtResource("1_a03an")
+stretch_mode = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="TimeLabel" type="Label" parent="."]
+layout_mode = 0
+offset_left = 967.0
+offset_top = 706.0
+offset_right = 1193.0
+offset_bottom = 836.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 50
+
+[node name="PlayAgain" type="Button" parent="."]
+layout_mode = 0
+offset_left = 957.0
+offset_top = 829.0
+offset_right = 1337.0
+offset_bottom = 1009.0
+text = "Play Again?"
+
+[connection signal="pressed" from="PlayAgain" to="." method="_on_play_again_pressed"]

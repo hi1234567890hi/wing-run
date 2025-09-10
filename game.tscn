@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://bik7p8ielxl77"]
+[gd_scene load_steps=18 format=3 uid="uid://bik7p8ielxl77"]
 
 [ext_resource type="Texture2D" uid="uid://bj043wpow03l0" path="res://Blue.png" id="1_7jktm"]
 [ext_resource type="PackedScene" uid="uid://dnf3v65cs01vx" path="res://platform.tscn" id="1_80nbo"]
@@ -14,6 +14,11 @@
 [ext_resource type="Texture2D" uid="uid://v0jylh66545l" path="res://watch.png" id="12_iotsf"]
 [ext_resource type="PackedScene" uid="uid://b1yuhwai6p1jm" path="res://spike.tscn" id="13_215e1"]
 [ext_resource type="PackedScene" uid="uid://ca6wqxmftvvoo" path="res://breakable.tscn" id="14_7sc4i"]
+[ext_resource type="Script" uid="uid://dnd82yb2rtmtq" path="res://win.gd" id="15_80cx4"]
+[ext_resource type="Texture2D" uid="uid://darhkmd40loeu" path="res://shop.png" id="16_e8heu"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rvswv"]
+size = Vector2(288, 193)
 
 [node name="Game" type="Node2D"]
 
@@ -188,7 +193,7 @@ scale = Vector2(0.471154, 0.471154)
 texture = ExtResource("9_mfdv2")
 
 [node name="CharacterBody2D" parent="." groups=["player"] instance=ExtResource("2_e2o6t")]
-position = Vector2(40, 340)
+position = Vector2(0, 395)
 
 [node name="Image" type="Sprite2D" parent="."]
 position = Vector2(2400, 307)
@@ -524,3 +529,281 @@ position = Vector2(-5301, 1700)
 
 [node name="Area2D53" parent="." instance=ExtResource("13_215e1")]
 position = Vector2(-5116, 1700)
+
+[node name="StaticBody2D50" parent="." instance=ExtResource("1_80nbo")]
+position = Vector2(-5595, 1533)
+
+[node name="Area2D61" parent="." instance=ExtResource("13_215e1")]
+position = Vector2(-5714, 1085)
+
+[node name="Area2D62" parent="." instance=ExtResource("13_215e1")]
+position = Vector2(-5479, 1136)
+rotation = 3.14159
+
+[node name="StaticBody2D52" parent="." instance=ExtResource("1_80nbo")]
+position = Vector2(-5596, 1110)
+
+[node name="Area2D59" parent="." instance=ExtResource("13_215e1")]
+position = Vector2(-5479, 1333)
+rotation = 3.14159
+
+[node name="Area2D58" parent="." instance=ExtResource("13_215e1")]
+position = Vector2(-5717, 1507)
+
+[node name="StaticBody2D51" parent="." instance=ExtResource("1_80nbo")]
+position = Vector2(-5597, 1308)
+
+[node name="Area2D60" parent="." instance=ExtResource("13_215e1")]
+position = Vector2(-5722, 1282)
+
+[node name="StaticBody2D53" parent="." instance=ExtResource("1_80nbo")]
+position = Vector2(-6021, 909)
+scale = Vector2(1.52001, 1.52001)
+
+[node name="StaticBody2D54" parent="." instance=ExtResource("1_80nbo")]
+position = Vector2(-6151, 749)
+scale = Vector2(0.64, 0.64)
+
+[node name="StaticBody2D55" parent="." instance=ExtResource("1_80nbo")]
+position = Vector2(-5845, 750)
+scale = Vector2(0.999961, 0.639961)
+
+[node name="Area2D63" parent="." instance=ExtResource("13_215e1")]
+position = Vector2(-6220, 879)
+
+[node name="Area2D64" parent="." instance=ExtResource("13_215e1")]
+position = Vector2(-5826, 726)
+
+[node name="Area2D65" parent="." instance=ExtResource("13_215e1")]
+position = Vector2(-5872, 726)
+
+[node name="Area2D66" parent="." instance=ExtResource("13_215e1")]
+position = Vector2(-6080, 725)
+
+[node name="Area2D67" parent="." instance=ExtResource("13_215e1")]
+position = Vector2(-5968, 726)
+
+[node name="StaticBody2D56" parent="." instance=ExtResource("1_80nbo")]
+position = Vector2(-6453, 543)
+
+[node name="StaticBody2D57" parent="." instance=ExtResource("1_80nbo")]
+position = Vector2(-6874, 391)
+
+[node name="Area2D68" parent="." instance=ExtResource("13_215e1")]
+position = Vector2(-6752, 365)
+
+[node name="Area2D69" parent="." instance=ExtResource("13_215e1")]
+position = Vector2(-6949, 365)
+
+[node name="Area2D70" parent="." instance=ExtResource("13_215e1")]
+position = Vector2(-6860, 365)
+
+[node name="StaticBody2D66" parent="." instance=ExtResource("1_80nbo")]
+position = Vector2(-8340, 86)
+
+[node name="StaticBody2D67" parent="." instance=ExtResource("1_80nbo")]
+position = Vector2(-8359, -377)
+
+[node name="Area2D89" parent="." instance=ExtResource("13_215e1")]
+position = Vector2(-8430, -344)
+rotation = 3.14159
+
+[node name="Area2D90" parent="." instance=ExtResource("13_215e1")]
+position = Vector2(-8346, -349)
+rotation = 3.14159
+
+[node name="Area2D91" parent="." instance=ExtResource("13_215e1")]
+position = Vector2(-8278, -341)
+rotation = 3.14159
+
+[node name="Area2D92" parent="." instance=ExtResource("13_215e1")]
+position = Vector2(-8481, -403)
+
+[node name="Area2D93" parent="." instance=ExtResource("13_215e1")]
+position = Vector2(-8414, -404)
+
+[node name="Area2D94" parent="." instance=ExtResource("13_215e1")]
+position = Vector2(-8337, -404)
+
+[node name="Area2D95" parent="." instance=ExtResource("13_215e1")]
+position = Vector2(-8241, -406)
+
+[node name="StaticBody2D68" parent="." instance=ExtResource("14_7sc4i")]
+position = Vector2(-8429, -23)
+
+[node name="StaticBody2D69" parent="." instance=ExtResource("14_7sc4i")]
+position = Vector2(-8346, -23)
+
+[node name="StaticBody2D70" parent="." instance=ExtResource("14_7sc4i")]
+position = Vector2(-8266, -24)
+
+[node name="Area2D96" parent="." instance=ExtResource("13_215e1")]
+position = Vector2(-8460, 59)
+
+[node name="Area2D97" parent="." instance=ExtResource("13_215e1")]
+position = Vector2(-8398, 61)
+
+[node name="Area2D98" parent="." instance=ExtResource("13_215e1")]
+position = Vector2(-8332, 60)
+
+[node name="Area2D99" parent="." instance=ExtResource("13_215e1")]
+position = Vector2(-8269, 60)
+
+[node name="StaticBody2D71" parent="." instance=ExtResource("1_80nbo")]
+position = Vector2(-8660, 157)
+
+[node name="StaticBody2D72" parent="." instance=ExtResource("1_80nbo")]
+position = Vector2(-8677, -287)
+
+[node name="Area2D101" parent="." instance=ExtResource("13_215e1")]
+position = Vector2(-8748, -254)
+rotation = 3.14159
+
+[node name="Area2D102" parent="." instance=ExtResource("13_215e1")]
+position = Vector2(-8664, -259)
+rotation = 3.14159
+
+[node name="Area2D103" parent="." instance=ExtResource("13_215e1")]
+position = Vector2(-8596, -251)
+rotation = 3.14159
+
+[node name="Area2D104" parent="." instance=ExtResource("13_215e1")]
+position = Vector2(-8799, -313)
+
+[node name="Area2D105" parent="." instance=ExtResource("13_215e1")]
+position = Vector2(-8732, -314)
+
+[node name="Area2D106" parent="." instance=ExtResource("13_215e1")]
+position = Vector2(-8655, -314)
+
+[node name="Area2D107" parent="." instance=ExtResource("13_215e1")]
+position = Vector2(-8559, -316)
+
+[node name="StaticBody2D73" parent="." instance=ExtResource("14_7sc4i")]
+position = Vector2(-8749, 48)
+
+[node name="StaticBody2D74" parent="." instance=ExtResource("14_7sc4i")]
+position = Vector2(-8666, 48)
+
+[node name="StaticBody2D75" parent="." instance=ExtResource("14_7sc4i")]
+position = Vector2(-8586, 47)
+
+[node name="Area2D108" parent="." instance=ExtResource("13_215e1")]
+position = Vector2(-8780, 130)
+
+[node name="Area2D109" parent="." instance=ExtResource("13_215e1")]
+position = Vector2(-8718, 132)
+
+[node name="Area2D110" parent="." instance=ExtResource("13_215e1")]
+position = Vector2(-8652, 131)
+
+[node name="Area2D111" parent="." instance=ExtResource("13_215e1")]
+position = Vector2(-8589, 131)
+
+[node name="Area2D112" parent="." instance=ExtResource("13_215e1")]
+position = Vector2(-8536, 131)
+
+[node name="Area2D100" parent="." instance=ExtResource("13_215e1")]
+position = Vector2(-8216, 60)
+
+[node name="StaticBody2D61" parent="." instance=ExtResource("1_80nbo")]
+position = Vector2(-8035, -7)
+
+[node name="StaticBody2D62" parent="." instance=ExtResource("1_80nbo")]
+position = Vector2(-8052, -432)
+
+[node name="Area2D77" parent="." instance=ExtResource("13_215e1")]
+position = Vector2(-8123, -399)
+rotation = 3.14159
+
+[node name="Area2D78" parent="." instance=ExtResource("13_215e1")]
+position = Vector2(-8039, -404)
+rotation = 3.14159
+
+[node name="Area2D79" parent="." instance=ExtResource("13_215e1")]
+position = Vector2(-7971, -396)
+rotation = 3.14159
+
+[node name="StaticBody2D58" parent="." instance=ExtResource("1_80nbo")]
+position = Vector2(-7252, 282)
+
+[node name="StaticBody2D59" parent="." instance=ExtResource("1_80nbo")]
+position = Vector2(-7259, 11)
+
+[node name="Area2D71" parent="." instance=ExtResource("13_215e1")]
+position = Vector2(-7330, 44)
+rotation = 3.14159
+
+[node name="Area2D72" parent="." instance=ExtResource("13_215e1")]
+position = Vector2(-7246, 39)
+rotation = 3.14159
+
+[node name="Area2D73" parent="." instance=ExtResource("13_215e1")]
+position = Vector2(-7178, 47)
+rotation = 3.14159
+
+[node name="Area2D74" parent="." instance=ExtResource("13_215e1")]
+position = Vector2(-7140, -15)
+
+[node name="Area2D75" parent="." instance=ExtResource("13_215e1")]
+position = Vector2(-7185, -15)
+
+[node name="Area2D76" parent="." instance=ExtResource("13_215e1")]
+position = Vector2(-7229, -15)
+
+[node name="StaticBody2D60" parent="." instance=ExtResource("1_80nbo")]
+position = Vector2(-7638, -195)
+
+[node name="Area2D80" parent="." instance=ExtResource("13_215e1")]
+position = Vector2(-8174, -458)
+
+[node name="Area2D81" parent="." instance=ExtResource("13_215e1")]
+position = Vector2(-8107, -459)
+
+[node name="Area2D82" parent="." instance=ExtResource("13_215e1")]
+position = Vector2(-8030, -459)
+
+[node name="Area2D83" parent="." instance=ExtResource("13_215e1")]
+position = Vector2(-7934, -461)
+
+[node name="StaticBody2D63" parent="." instance=ExtResource("14_7sc4i")]
+position = Vector2(-8124, -116)
+
+[node name="StaticBody2D64" parent="." instance=ExtResource("14_7sc4i")]
+position = Vector2(-8041, -116)
+
+[node name="StaticBody2D65" parent="." instance=ExtResource("14_7sc4i")]
+position = Vector2(-7961, -117)
+
+[node name="Area2D84" parent="." instance=ExtResource("13_215e1")]
+position = Vector2(-8155, -34)
+
+[node name="Area2D85" parent="." instance=ExtResource("13_215e1")]
+position = Vector2(-8093, -32)
+
+[node name="Area2D86" parent="." instance=ExtResource("13_215e1")]
+position = Vector2(-8027, -33)
+
+[node name="Area2D87" parent="." instance=ExtResource("13_215e1")]
+position = Vector2(-7964, -33)
+
+[node name="Area2D88" parent="." instance=ExtResource("13_215e1")]
+position = Vector2(-7911, -33)
+
+[node name="StaticBody2D76" parent="." instance=ExtResource("1_80nbo")]
+position = Vector2(-9131, 341)
+
+[node name="Win" type="Area2D" parent="."]
+script = ExtResource("15_80cx4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Win"]
+position = Vector2(-9128, 236.5)
+shape = SubResource("RectangleShape2D_rvswv")
+
+[node name="Shop" type="Sprite2D" parent="Win"]
+position = Vector2(-9138, 234)
+scale = Vector2(0.367596, 0.367596)
+texture = ExtResource("16_e8heu")
+
+[node name="StaticBody2D77" parent="." instance=ExtResource("1_80nbo")]
+position = Vector2(-7593, 146)
