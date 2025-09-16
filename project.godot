@@ -19,6 +19,12 @@ config/icon="res://sprites/icon.svg"
 
 Global="*res://Global.gd"
 
+[display]
+
+window/stretch/mode="viewport"
+window/stretch/aspect="expand"
+window/stretch/scale=0.5
+
 [input]
 
 left={
